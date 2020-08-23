@@ -28,6 +28,9 @@ config.env
 exmpl/
 /tst
 tst/
+Idea.txt
+temporary/
+/temporary
 
 npm-debug.log*
 yarn-debug.log*

@@ -105,6 +105,13 @@ export const GlobalStyle = createGlobalStyle`
     grid-template-columns: 100%;
   }
 
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    vertical-align: middle;
+  }
+
   main {
     margin: 0 auto;
     width: 100%;
@@ -184,6 +191,30 @@ export const GlobalStyle = createGlobalStyle`
         opacity: 0.5;
       }
     }
+  }
+
+  ul {
+    &.fancy-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      font-size: var(--fz-lg);
+      li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px;
+        &:before {
+          content: '▹';
+          position: absolute;
+          left: 0;
+          color: var(--blue);
+        }
+      }
+    }
+  }
+
+  #logo {
+    color: var(--blue);
   }
 
 `;

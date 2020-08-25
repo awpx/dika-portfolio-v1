@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     --light-navy: #171c28;
     --lightest-navy: #2f3a54;
     --navy-shadow: rgba(23, 28, 40, 0.7);
-    --slate: #9c88b0;
+    --slate: #8793b0;
     --light-slate: #a8b2d1;
     --lightest-slate: #a8b2d1;
     --white: #e6f1ff;
@@ -210,6 +210,69 @@ export const GlobalStyle = createGlobalStyle`
           color: var(--blue);
         }
       }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    color: var(--lightest-slate);
+    line-height: 1.1;
+  }
+
+  .big-heading {
+    margin: 0;
+    font-size: clamp(40px, 8vw, 70px);
+  }
+
+  p {
+    margin: 0 0 15px 0;
+
+    & > a {
+      display: inline-block;
+      text-decoration: none;
+      text-decoration-skip-ink: auto;
+      position: relative;
+      transition: var(--transition);
+      cursor: pointer;
+      color: var(--blue);
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--blue);
+        outline: 0;
+        &:after {
+          width: 100%;
+        }
+        & > * {
+          color: var(--blue) !important;
+          transition: var(--transition);
+        }
+      }
+      &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        position: relative;
+        bottom: 0.37em;
+        background-color: var(--blue);
+        transition: var(--transition);
+        opacity: 0.5;
+      }
+    }
+
+    & > code {
+      background-color: var(--light-navy);
+      color: var(--white);
+      font-size: var(--fz-sm);
+      border-radius: var(--border-radius);
+      padding: 0.3em 0.5em;
     }
   }
 

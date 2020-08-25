@@ -2,6 +2,7 @@ import React from 'react'
 import { Header } from '../header/Header'
 import { SocialEmail } from '../socialEmail/SocialEmail'
 import { StyledContent } from './LayoutStyles'
+import { Footer } from '../footer/Footer'
 
 export const Layout = ({ children }) => {
   return (
@@ -12,7 +13,7 @@ export const Layout = ({ children }) => {
 
         <div id="content">
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </StyledContent>
     </>

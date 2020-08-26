@@ -23,7 +23,7 @@ export const Hero = () => {
   const items = [one, two, three, four, five]
 
   return (
-    <StyledHeroSection>
+    <StyledHeroSection id='hero'>
       {items.map((item, i) => (
             <div key={i}>{item}</div>
         ))}

@@ -1,8 +1,7 @@
 import React from 'react'
-import { BrowserRouter as Router, } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { GlobalStyle } from './GlobalStyle'
-import { Layout } from  './components/layout/Layout'
-import { Hero } from './components/hero/Hero'
+import { IndexPages } from './pages/IndexPage'
 
 
 function App() {
@@ -10,12 +9,7 @@ function App() {
     <>
       <GlobalStyle />
         <Router>
-        <Layout>
-          <main className='fillHeight' style={{counterReset: 'section'}}>
-            <Hero />
-          </main>
-          
-        </Layout>
+          <Route exact path='/' component={IndexPages} />
         </Router>
     </>
   );

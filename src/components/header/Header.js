@@ -10,9 +10,9 @@ export const Header = () => {
     <StyledHeader>
       <StyledNav>
         <div className="logo" tabIndex="-1">
-          <Link to="/" aria-label="home">
+          <a href="/" aria-label="home">
             <IconLogo />
-          </Link>
+          </a>
         </div>
 
         <StyledLinks>

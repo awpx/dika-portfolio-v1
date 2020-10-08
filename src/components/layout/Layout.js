@@ -8,9 +8,6 @@ export const Layout = ({ children, location }) => {
 
   const isHome = location.pathname === '/'
 
-  console.log(location)
-
-
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.substring(1); // location.hash without the '#'
